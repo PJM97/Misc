@@ -116,3 +116,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+function xuta() { 
+    git add -A
+    git commit -m "$1"
+    git push
+}
