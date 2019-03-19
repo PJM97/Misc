@@ -20,11 +20,9 @@ alias misc='cd ~/Misc;pwd'
 alias gs='git status'
 alias g_reset='git reset HEAD;gs'
 
-
 alias "c=xclip"		# copy to clipboard
 alias "v=xclip -o"	# paste 
 alias "template_makefile=cat ~/PJM/makefile_template | xclip -selection clipboard"
-
 
 function xuta() { 
     gs
