@@ -27,8 +27,10 @@ alias "template_makefile=cat ~/PJM/makefile_template | xclip -selection clipboar
 
 
 function xuta() { 
+    gs
     git add -A
     git commit -m "$1"
     git push
+    gs
 }
 
