@@ -17,3 +17,9 @@ alias misc='cd ~/Misc;pwd'
 
 alias gs='git status'
 alias g_reset='git reset HEAD;gs'
+
+function xuta() { 
+    git add -A
+    git commit -m "$1"
+    git push
+}

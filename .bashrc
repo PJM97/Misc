@@ -117,9 +117,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-function xuta() { 
-    git add -A
-    git commit -m "$1"
-    git push
-}
