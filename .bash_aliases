@@ -14,12 +14,14 @@ alias misc_upd='cp ~/.bashrc ~/Misc;cp ~/.bash_aliases ~/Misc'
 
 alias ~='cd ~;pwd'
 alias pl='cd ~/PL;pwd'
-alias pjm='cd ~/PJM;p'
+alias pjm='cd ~/PJM;pwd'
 alias misc='cd ~/Misc;pwd'
 
-alias c="xclip"		# copy to clipboard
-alias v="xclip -o"	# paste 
-alias template_makefile="cat ~/PJM/makefile_template | xclip -selection clipboard"
+alias c="xclip"		
+alias v="xclip -o"	
+alias c2cb="xclip -selection clipboard"	# copy to clipboard
+
+alias template_makefile="cat ~/PJM/makefile_template | c2cb"
 
 # git
 alias gs='git status'
