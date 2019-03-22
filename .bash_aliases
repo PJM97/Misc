@@ -17,9 +17,9 @@ alias pl='cd ~/PL;pwd'
 alias pjm='cd ~/PJM;p'
 alias misc='cd ~/Misc;pwd'
 
-alias "c=xclip"		# copy to clipboard
-alias "v=xclip -o"	# paste 
-alias "template_makefile=cat ~/PJM/makefile_template | xclip -selection clipboard"
+alias c="xclip"		# copy to clipboard
+alias v="xclip -o"	# paste 
+alias template_makefile="cat ~/PJM/makefile_template | xclip -selection clipboard"
 
 # git
 alias gs='git status'
