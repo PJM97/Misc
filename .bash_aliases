@@ -3,6 +3,7 @@ alias pls='sudo $(history -p !!)'
 alias bash_reload='source ~/.bashrc'
 
 alias untgz='tar -xzf'
+alias open_pdf='xdg-open'
 
 alias jj='firefox http://natura.di.uminho.pt/~jj/pl-19/ &'
 alias p=pwd
@@ -18,11 +19,12 @@ function cdd(){
 alias misc_upd='cp ~/.bashrc ~/Misc;cp ~/.bash_aliases ~/Misc'
 
 alias    ~='cd ~;p'
-alias   so='cd ~/SO;p'
 alias   pl='cd ~/PL;p'
+alias   so='cd ~/SO;p'
 alias  bin='cd /bin;p'
-alias  pl_='cd ~/PL_TPs;p'
 alias  pjm='cd ~/PJM;p'
+alias  so_='cd ~/SO_TPs/SO_2019;p'
+alias  pl_='cd ~/PL_TPs/TP3;p'
 alias misc='cd ~/Misc;p'
 
 
@@ -36,11 +38,13 @@ alias   mrun="make;run"
 alias  clean="make clean"
 alias mclean="make;clean"
 
-alias template_makefile="cat ~/PJM/makefile_template | c2cb"
+alias template_makefile="cat ~/PJM/makefile_template   | c2cb"
+alias template_gitignore="cat ~/PJM/gitignore_template | c2cb"
 
 # git
 alias    g?='git diff'
 alias    gs='git status'
+alias    gC='git log -1'
 alias  golo='git push;gs'
 alias cruza='git pull;gs'
 alias fora_de_jogo='git reset origin/master;gs'
