@@ -1,4 +1,4 @@
-alias cl='clear'
+alias cl='clear;clear'
 alias pls='sudo $(history -p !!)'
 alias bash_reload='source ~/.bashrc'
 
@@ -9,6 +9,7 @@ alias jj='firefox http://natura.di.uminho.pt/~jj/pl-19/ &'
 alias p=pwd
 alias r='bash_reload; misc_upd'
 alias s=subl
+alias gui='xdg-open ./'
 alias edit_alias='s ~/.bash_aliases'
 function cdd(){
 	mkdir "$*"
@@ -24,7 +25,8 @@ alias   so='cd ~/SO;p'
 alias  bin='cd /bin;p'
 alias  pjm='cd ~/PJM;p'
 alias  so_='cd ~/SO_TPs/SO_2019;p'
-alias  pl_='cd ~/PL_TPs/TP3;p'
+alias  pl_='cd ~/PL_TPs;p'
+alias drum='cd ~/PL_TPs/TP1/final++;p'
 alias misc='cd ~/Misc;p'
 
 
