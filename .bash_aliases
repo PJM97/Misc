@@ -4,6 +4,7 @@ alias bash_reload='source ~/.bashrc'
 
 alias untgz='tar -xzf'
 alias open_pdf='xdg-open'
+alias get='sudo apt-get install'
 
 alias jj='firefox http://natura.di.uminho.pt/~jj/pl-19/ &'
 alias p=pwd
@@ -17,22 +18,27 @@ function cdd(){
 	p
 }
 
-alias misc_upd='cp ~/.bashrc ~/Misc;cp ~/.bash_aliases ~/Misc'
+alias misc_upd='cp ~/.bashrc ~/Gits/Misc;cp ~/.bash_aliases ~/Gits/Misc'
 
 alias    ~='cd ~;p'
-alias   pl='cd ~/PL;p'
-alias   so='cd ~/SO;p'
-alias  bin='cd /bin;p'
-alias  pjm='cd ~/PJM;p'
-alias  so_='cd ~/SO_TPs/SO_2019;p'
-alias  pl_='cd ~/PL_TPs;p'
-alias drum='cd ~/PL_TPs/TP1/final++;p'
-alias misc='cd ~/Misc;p'
+alias  bin='cd ~/bin;p'
+alias   so='cd ~/Gits/SO;p'
+alias   pl='cd ~/Gits/PL;p'
+alias  pjm='cd ~/Gits/PJM;p'
+alias  pln='cd ~/Gits/IPLN;p'
+alias  pl_='cd ~/Gits/PL_TPs;p'
+alias  so_='cd ~/Gits/SO_TPs/SO_2019;p'
+alias drum='cd ~/Gits/PL_TPs/TP1/final++;p'
+alias misc='cd ~/Gits/Misc;p'
+alias gits='cd ~/Gits;p'
 
 
 # alias c="xclip"
 # alias v="xclip -o"
 alias c2cb="xclip -selection clipboard"	# copy to clipboard
+
+#python
+alias py="python3.6"
 
 # makefile
 alias    run="make run"
