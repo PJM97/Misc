@@ -2,11 +2,16 @@ alias cl='clear;clear'
 alias pls='sudo $(history -p !!)'
 alias bash_reload='source ~/.bashrc'
 
+alias kill_pid='kill -9'
+
 alias untgz='tar -xzf'
 alias open_pdf='xdg-open'
 alias get='sudo apt-get install'
 
+alias cws='fortune | cowsay -f stegosaurus'
+
 alias jj='firefox http://natura.di.uminho.pt/~jj/pl-19/ &'
+alias jj_='cd ~/JJ_ShowOff;pwd'
 alias p=pwd
 alias r='bash_reload; misc_upd'
 alias s=subl
@@ -25,20 +30,28 @@ alias  bin='cd ~/bin;p'
 alias   so='cd ~/Gits/SO;p'
 alias   pl='cd ~/Gits/PL;p'
 alias  pjm='cd ~/Gits/PJM;p'
-alias  pln='cd ~/Gits/IPLN;p'
+alias  pln='cd ~/IPLN;p'
+alias pln_='cd ~/Gits/IPLN/TP1/Tema_B;p'
 alias  pl_='cd ~/Gits/PL_TPs;p'
 alias  so_='cd ~/Gits/SO_TPs/SO_2019;p'
 alias drum='cd ~/Gits/PL_TPs/TP1/final++;p'
 alias misc='cd ~/Gits/Misc;p'
 alias gits='cd ~/Gits;p'
+alias   tc='cd ~/Gits/Crypto/1920-TC;p'
+alias  tc_='cd ~/Gits/Crypto/1920-G7/Guioes;p'
+alias expl='cd ~/Expl/ProcLing;p'
+alias sols='cd ~/Expl/Sols;p'
+alias   cc='cd ~/CarlosCastro;p'
 
 
 # alias c="xclip"
 # alias v="xclip -o"
 alias c2cb="xclip -selection clipboard"	# copy to clipboard
 
+
+
 #python
-alias py="python3.6"
+alias pyt="python3.6"
 
 # makefile
 alias    run="make run"
@@ -64,3 +77,16 @@ function xuta() {
     gs
 }
 
+function gcc_() {
+	gcc -o "${1%.*}" "$1" -lncurses;
+}
+
+function gcc_run() {
+	gcc -o "${1%.*}" "$1" -lncurses;
+	clear
+	./"${1%.*}" "$2"
+}
+
+# alias gcc_='gcc -o mm "$1"'
+
+alias jjcd='mkdir -p ~/JJ_ShowOff/$(date "+%F") ; cd ~/JJ_ShowOff/$(date "+%F");pwd'

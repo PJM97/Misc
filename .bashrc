@@ -117,3 +117,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+# o SO procura os progs para executar no path antigo e na dir atual
+export PATH=$PATH:.
+
