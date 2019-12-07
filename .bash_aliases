@@ -5,7 +5,7 @@ alias bash_reload='source ~/.bashrc'
 alias kill_pid='kill -9'
 
 alias untgz='tar -xzf'
-alias open_pdf='xdg-open'
+alias openn='xdg-open'
 alias get='sudo apt-get install'
 
 alias cws='fortune | cowsay -f stegosaurus'
@@ -66,7 +66,9 @@ alias template_gitignore="cat ~/PJM/gitignore_template | c2cb"
 alias    g?='git diff'
 alias    gs='git status'
 alias    gC='git log -1'
+alias   grm='git rm --cached'
 alias  golo='git push;gs'
+alias  mico='git clone'
 alias cruza='git pull;gs'
 alias fora_de_jogo='git reset origin/master;gs'
 function xuta() { 
@@ -77,12 +79,12 @@ function xuta() {
     gs
 }
 
-function gcc_() {
-	gcc -o "${1%.*}" "$1" -lncurses;
+function gccc() {
+	gcc -o "${1%.*}.out" "$1" -lncurses -Wall;
 }
 
-function gcc_run() {
-	gcc -o "${1%.*}" "$1" -lncurses;
+function gcccr() {
+	gcc -o "${1%.*}" "$1" -lncurses -Wall;
 	clear
 	./"${1%.*}" "$2"
 }
