@@ -12,7 +12,6 @@ alias cws='fortune | cowsay -f stegosaurus'
 
 alias jj='firefox http://natura.di.uminho.pt/~jj/pl-19/ &'
 alias jj_='cd ~/JJ_ShowOff;pwd'
-alias p=pwd
 alias r='bash_reload; misc_upd'
 alias s=subl
 alias gui='xdg-open ./'
@@ -20,28 +19,29 @@ alias edit_alias='s ~/.bash_aliases'
 function cdd(){
 	mkdir "$*"
 	cd "$*"
-	p
+	pwd
 }
 
 alias misc_upd='cp ~/.bashrc ~/Gits/Misc;cp ~/.bash_aliases ~/Gits/Misc'
 
-alias    ~='cd ~;p'
-alias  bin='cd ~/bin;p'
-alias   so='cd ~/Gits/SO;p'
-alias   pl='cd ~/Gits/PL;p'
-alias  pjm='cd ~/Gits/PJM;p'
-alias  pln='cd ~/IPLN;p'
-alias pln_='cd ~/Gits/IPLN/TP1/Tema_B;p'
-alias  pl_='cd ~/Gits/PL_TPs;p'
-alias  so_='cd ~/Gits/SO_TPs/SO_2019;p'
-alias drum='cd ~/Gits/PL_TPs/TP1/final++;p'
-alias misc='cd ~/Gits/Misc;p'
-alias gits='cd ~/Gits;p'
-alias   tc='cd ~/Gits/Crypto/1920-TC;p'
-alias  tc_='cd ~/Gits/Crypto/1920-G7/Guioes;p'
-alias expl='cd ~/Expl/ProcLing;p'
-alias sols='cd ~/Expl/Sols;p'
-alias   cc='cd ~/CarlosCastro;p'
+alias    ~='cd ~;pwd'
+alias  bin='cd ~/bin;pwd'
+alias   so='cd ~/Gits/SO;pwd'
+alias   pl='cd ~/Gits/PL;pwd'
+alias  pjm='cd ~/Gits/PJM;pwd'
+alias  pln='cd ~/IPLN;pwd'
+alias pln_='cd ~/Gits/IPLN/TP1/Tema_B;pwd'
+alias  pl_='cd ~/Gits/PL_TPs;pwd'
+alias  so_='cd ~/Gits/SO_TPs/SO_2019;pwd'
+alias drum='cd ~/Gits/PL_TPs/TP1/final++;pwd'
+alias misc='cd ~/Gits/Misc;pwd'
+alias gits='cd ~/Gits;pwd'
+alias   tc='cd ~/Gits/Crypto/1920-TC;pwd'
+alias  tc_='cd ~/Gits/Crypto/1920-G7/Guioes;pwd'
+alias expl='cd ~/Expl/ProcLing;pwd'
+alias exp_='cd ~/Gits/Auditorias/src2;pwd'
+alias sols='cd ~/Expl/Sols;pwd'
+alias   cc='cd ~/CarlosCastro;pwd'
 
 
 # alias c="xclip"
@@ -51,7 +51,7 @@ alias c2cb="xclip -selection clipboard"	# copy to clipboard
 
 
 #python
-alias pyt="python3.6"
+alias p="python3.6"
 
 # makefile
 alias    run="make run"
@@ -68,7 +68,7 @@ alias    gs='git status'
 alias    gC='git log -1'
 alias   grm='git rm --cached'
 alias  golo='git push;gs'
-alias  mico='git clone'
+# alias  mico='git clone'
 alias cruza='git pull;gs'
 alias fora_de_jogo='git reset origin/master;gs'
 function xuta() { 
@@ -83,10 +83,14 @@ function gccc() {
 	gcc -o "${1%.*}.out" "$1" -lncurses -Wall;
 }
 
-function gcccr() {
-	gcc -o "${1%.*}" "$1" -lncurses -Wall;
+function gccc_() {
+	gcc -o "${1%.*}.out" "$1" -lncurses -Wall;
 	clear
-	./"${1%.*}" "$2"
+	./"${1%.*}.out" "$2"
+}
+
+function mico(){
+	git clone "https://github.com/$1/$2"
 }
 
 # alias gcc_='gcc -o mm "$1"'
